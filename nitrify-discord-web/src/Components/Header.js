@@ -12,7 +12,7 @@ const Header = props => {
             <p className='h1' style={{fontSize:'30px',display:'inline-block',float:'left',margin:'7px'}}>Nitrify-discord</p>
             <div style={{cursor:'pointer', float:'right'}}>
                 <p onClick={()=>gotoCommands()} style={{display:'inline-block',marginRight:'50px',padding:'0px'}}><b>Commands</b></p>
-                <p style={{display:'inline-block',marginRight:'50px',padding:'0px'}}><b>Github</b></p>
+                <p style={{display:'inline-block',marginRight:'50px',padding:'0px'}}><a style={{textDecoration: 'none'}} href='https://github.com/dani2221/nitrify-discord'><b style={{color: 'white'}}>Github</b></a></p>
                 <p style={{display:'inline-block',marginRight:'30px',padding:'0px'}}><a style={{textDecoration: 'none'}} href='https://patreon.com/nitrify'><b style={{color: 'white'}}>Support</b></a></p>
             </div>
         </header>
