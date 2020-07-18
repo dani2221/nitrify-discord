@@ -50,7 +50,7 @@ initializeChannelDatabase = async channelNum => {
 }
 client.on("ready", () => {
     console.log("Ready");
-    client.user.setActivity("Type !help");
+    client.user.setActivity("\'help");
 })
 
 client.on('message', async msg => {
