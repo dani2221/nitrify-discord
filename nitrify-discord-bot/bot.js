@@ -48,6 +48,10 @@ initializeChannelDatabase = async channelNum => {
         return FAIL;
     }
 }
+client.on("ready", () => {
+    console.log("Ready");
+    client.user.setActivity("Type !help");
+})
 
 client.on('message', async msg => {
     if (msg.author.bot) return;
