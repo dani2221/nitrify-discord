@@ -77,8 +77,21 @@ client.on('message', async msg => {
             msg.channel.stopTyping(true);
     });
     
-    }else if(msg.content.toLowerCase()==='\'id'){
-        msg.channel.send(msg.channel.id);
+    }else if (msg.content.toLowerCase() === '\'about') {
+     const embed = new Discord.MessageEmbed()
+          .setTitle('Nitrify-discord')
+          .setURL('https://nitrifydiscord.web.app/')
+          .addFields(
+            { name: 'About', value: 'Nitrify is a javascript project made of two parts. A website where users can upload media and specify commands, and a discord bot to directly interact with that media in the channel through the specified commands. Every channel has an unique id that can be used on the website to manage the media specificly for that channel.' },
+            { name: 'Main features', value: '+Send cloud stored photos and emojis directly to your channel with a simple command, Option to Automaticly down-scale the image, so that it will be send in the discord channel as an emoji, GIFs supported, Easily manage all your media in one place'},
+            { name: 'Tools and hosting', value: 'The website is built using React.js, while the discord bot is developed with the discord.js library. Google\'s Firebase is used for cloud storage, database and hosting of the website. The discord bot is hosted thru heroku' }
+          )
+          .setColor('#0099ff')
+          .setTimestamp()
+        msg.channel.send(embed);
+    }
+    else if(msg.content.toLowerCase()==='\'id'){
+          msg.channel.send(msg.channel.id);
     }else if(msg.content.toLowerCase()==='\'help'){
         const embed = new Discord.MessageEmbed()
         .setTitle('Help')
